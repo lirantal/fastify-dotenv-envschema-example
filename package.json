@@ -1,24 +1,24 @@
 {
-  "name": "fastify-dotenv-example",
+  "name": "fastify-dotenv-envschema-example",
   "version": "1.0.0",
-  "description": "A Fastify example codebase for using dotenv",
+  "description": "A Fastify example codebase for using dotenv with env-schema wrapper",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lirantal/fastify-dotenv-example.git"
+    "url": "git+https://github.com/lirantal/fastify-dotenv-envschema-example.git"
   },
   "type": "module",
   "author": "Liran Tal",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/lirantal/fastify-dotenv-example/issues"
+    "url": "https://github.com/lirantal/fastify-dotenv-envschema-example/issues"
   },
-  "homepage": "https://github.com/lirantal/fastify-dotenv-example#readme",
+  "homepage": "https://github.com/lirantal/fastify-dotenv-envschema-example#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
+    "@fastify/env": "^4.2.0",
     "fastify": "^4.10.2",
     "fastify-plugin": "^4.4.0"
   },
