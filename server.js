@@ -1,25 +1,14 @@
-import Fastify from "fastify";
-import fastifyPlugin from "fastify-plugin";
-
-import indexRoutes from "./routes/index.js";
-import envPlugin from "./plugins/env.js";
-
-const fastify = Fastify({ logger: true });
-fastify.register(fastifyPlugin(envPlugin));
-fastify.register(fastifyPlugin(indexRoutes));
+import appFramework from "./app.js";
 
 async function initAppServer() {
-  // We have to call fastify.ready() so that
-  // fastify begins loading and applying all
-  // of the plugins, and then the `fastify`
-  // object applies all the decoration required
-  // for us to access `fastify.config`
-  await fastify.ready();
+  // Trigger the application framework to load
+  const app = await appFramework();
 
+  // Start the server
   try {
-    await fastify.listen({ port: fastify.config.HTTP_PORT || 3000 });
+    await app.listen({ port: app.config.HTTP_PORT || 3000 });
   } catch (err) {
-    fastify.log.error(err);
+    app.log.error(err);
     process.exit(1);
   }
 }
