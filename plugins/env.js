@@ -5,7 +5,7 @@ export default async function configPlugin(server, options, done) {
     type: "object",
     required: ["HTTP_PORT"],
     properties: {
-      PORT: {
+      HTTP_PORT: {
         type: "number",
         default: 3001,
       },
