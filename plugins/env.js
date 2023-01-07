@@ -1,6 +1,7 @@
 import fastifyEnv from "@fastify/env";
+import fastifyPlugin from "fastify-plugin";
 
-export default async function configPlugin(server, options, done) {
+async function configPlugin(server, options, done) {
   const schema = {
     type: "object",
     required: ["HTTP_PORT"],
@@ -34,3 +35,5 @@ export default async function configPlugin(server, options, done) {
 
   return fastifyEnv(server, configOptions, done);
 }
+
+export default fastifyPlugin(configPlugin);
