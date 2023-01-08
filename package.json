@@ -4,6 +4,9 @@
   "description": "A Fastify example codebase for using dotenv with env-schema wrapper",
   "main": "server.js",
   "scripts": {
+    "docker:build": "docker build -t fastify-dotenv-envschema-example .",
+    "docker:run": "npm run docker:build && docker run --rm -p 3001:3001 --name fastify-dotenv-envschema-example fastify-dotenv-envschema-example ",
+    "docker:sh": "docker exec -it fastify-dotenv-envschema-example /bin/sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
