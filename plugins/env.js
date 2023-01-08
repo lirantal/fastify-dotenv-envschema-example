@@ -4,11 +4,15 @@ import fastifyPlugin from "fastify-plugin";
 async function configPlugin(server, options, done) {
   const schema = {
     type: "object",
-    required: ["HTTP_PORT"],
+    required: ["HTTP_PORT", "HTTP_HOST"],
     properties: {
       HTTP_PORT: {
         type: "number",
         default: 3001,
+      },
+      HTTP_HOST: {
+        type: "string",
+        default: "0.0.0.0",
       },
       DEBUG_LEVEL: {
         type: "number",
