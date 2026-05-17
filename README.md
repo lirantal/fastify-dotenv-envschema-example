@@ -113,6 +113,10 @@ You can then access any process environment variable from anywhere that has a
 const myPort = fastify.config.HTTP_PORT
 ```
 
+## Contributing
+
+Please consult [CONTRIBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
+
 # Author
 
 Liran Tal <liran.tal@gmail.com>
