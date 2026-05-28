@@ -3,7 +3,7 @@
 This repository aims to provide Node.js developers who wish to build upon the [Fastify application framework](https://www.fastify.io) and use a configuration element with explicit schema with a flexible source of data for configuration.
 
 This project uses the following components to satisfy configuration:
-1. [dotenv](https://snyk.io/advisor/npm-package/dotenv) - a popular npm package that loads configuration from a file into the `process.env` variable.
+1. dotenv - a popular npm package that loads configuration from a file into the `process.env` variable.
 2. [env-schema](https://github.com/fastify/env-schema) - an npm package that validates the configuration source passed to it, or `process.env`, against a schema and provides back a validated object.
 3. [@fastify/env](https://github.com/fastify/fastify-env) - a Fastify plugin that loads configuration source into the Fastify application instance.
 
